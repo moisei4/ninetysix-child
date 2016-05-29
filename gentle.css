@@ -1,0 +1,257 @@
+/*--------------------------------------------------  Gentle styles  */
+
+/*----------  Navigation  */
+.waves-header a {
+	color:#444;
+	text-decoration:none;
+}
+
+.waves-header a:hover {
+	color:#f00;
+}
+
+.waves-header-inner .tw-logo {
+	position:fixed;
+	top:11px;
+	left:50%;
+	width:200px;
+	margin-left:-15px;
+}
+
+.admin-bar .waves-header-inner .tw-logo {
+	margin-top:32px;
+}
+
+body.header-left-side {
+	padding-left:170px;
+}
+
+body.header-left-side .waves-header {
+	width:170px;
+}
+
+body.header-left-side .waves-header-inner>div>.row>div.waves-header-right {
+	padding-bottom:100px;
+}
+
+.sf-mobile-menu {
+	margin:20px 0 0;
+	padding:0;
+	list-style:none;
+}
+
+.sf-mobile-menu ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+.sf-mobile-menu li {
+	line-height:20px;
+}
+
+.sf-mobile-menu li a {
+	font-size:13px;
+	text-transform:uppercase;
+	margin-top:3px;
+}
+
+.sf-mobile-menu .menu-item-has-children.active > ul {
+	height:auto;
+}
+
+.sf-mobile-menu .menu-item-has-children.not_active > ul {
+	height:0;
+}
+
+.sf-mobile-menu ul {
+	height:0;
+	overflow:hidden;
+	padding-left:10px;
+}
+
+.sf-mobile-menu ul,
+.sf-mobile-menu li {
+    -webkit-transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -ms-transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	display:block;
+}
+
+.sf-mobile-menu .menu-item-has-children > a:before {
+	top:3px;
+	z-index:0;
+}
+
+.sf-mobile-menu > .menu-item-has-children > .sub-menu > .menu-item-has-children > a:before{
+    font-size: 12px;
+    top: 3px;
+    right: 0;
+}
+
+.sf-mobile-menu a:hover,
+.sf-mobile-menu .current-menu-item > a,
+.sf-mobile-menu .current_page_item > a {
+	color:#f00;
+}
+
+/*.sf-mobile-menu.menu_opened .menu-item-has-children.active {
+	opacity:1;
+}
+
+.sf-mobile-menu.menu_opened:hover > li {
+	opacity:1;
+}
+
+.sf-mobile-menu.menu_opened > li {
+	opacity:0;
+}*/
+
+.waves-header-inner>div>.row>div {
+	align-items:flex-start;
+}
+
+body.header-left-side .waves-header-inner>div>.row {
+	justify-content:flex-end;
+}
+
+.waves-header-right {
+	padding-bottom:25px;
+}
+
+
+/*----------  Languages  */
+#lang_sel_list {
+	height:20px;
+}
+
+#lang_sel_list a, 
+#lang_sel_list a:visited {
+	padding-left:0;
+	margin-right:7px;
+	background:none !important;
+}
+
+#lang_sel_list li {
+	line-height:20px;
+	height:20px;
+}
+
+#lang_sel_list li:before {
+	content:none !important;
+}
+
+#lang_sel_list a {
+	vertical-align:top;
+	position:relative;
+	text-indent:-100px;
+	display:inline-block;
+	width:25px;
+	height:20px !important;
+	line-height:20px;
+	z-index:2;
+	overflow:hidden;
+}
+
+#lang_sel_list a.lang_sel_sel {
+	color:#f00;
+}
+
+#lang_sel_list .icl-ru a:after,
+#lang_sel_list .icl-uk a:after,
+#lang_sel_list .icl-en a:after {
+	position:absolute;
+	left:100px;
+	top:0;
+	font-size:11px;
+	text-transform:uppercase;
+}
+
+#lang_sel_list .icl-en a:after {
+	content:'eng';
+}
+
+#lang_sel_list .icl-uk a:after {
+	content:'ua';
+}
+
+#lang_sel_list .icl-ru a:after {
+	content:'rus';
+}
+
+
+/*----------  Header Social  */
+.social_list_links {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.social_list_links li {
+	display:block;
+	padding:0;
+	margin:0 7px 0 0;
+	line-height:20px;
+}
+
+.social_list_links li a {
+	text-transform:uppercase;
+	font-size:13px;
+	line-height:20px;
+}
+
+
+/*----------  Small fixes  */
+.tw-product-feature .single_add_to_cart_button,
+.cart-collaterals  .button,
+.shop_table .actions button, 
+.shop_table .actions input[type="submit"] {
+	background-color:#fff;
+	color:#111;
+}
+
+.tw-product-feature .single_add_to_cart_button:hover
+.cart-collaterals  .button:hover,
+.shop_table .actions button:hover, 
+.shop_table .actions input[type="submit"]:hover {
+	border-color:#ccc;
+}
+
+.tw-product-feature .single_add_to_cart_button.load {
+	background-color:#eee;
+}
+
+
+
+/*----------  Custom css from wp admin  */
+.soc-icon-set {
+    text-align: right !important;
+}
+
+.logotype {
+    text-align: center !important;
+}
+
+
+.single-product-navigation {
+    display: none !important;
+}
+
+.tw-breadcrumb .woocommerce-breadcrumb {
+    text-align: center !important;
+}
+
+.tw-product-feature .yith-wcwl-wishlistaddedbrowse a, .tw-product-feature .yith-wcwl-wishlistexistsbrowse a, .tw-product-feature a.add_to_wishlist {
+    display: none !important;
+}
+
+.woocommerce-tabs .wc-tabs-wrapper .tabs .wc-tabs {
+    display: none !important;
+}
+
+
+.tw-product.layout-3 .tw_product_container, .tw-product.layout-3 .waves-slick-slide, .tw-product.layout-3 .product_thumb {
+   background-image: !important;
+}

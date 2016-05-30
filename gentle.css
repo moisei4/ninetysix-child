@@ -223,7 +223,27 @@ body.header-left-side .waves-header-inner>div>.row {
 	background-color:#eee;
 }
 
+.tw-isotope-container .tw_product_header .absolute-content .tw-hoverline,
+.tw-isotope-container .product-slider-content .tw-hoverline {
+	display:none;
+}
 
+.tw_product_container:hover .product-slider-content .price,
+.tw-product.layout-2 .absolute-content:hover .price,
+.tw-product.layout-3 .absolute-content:hover .price,
+body .tw-product:not(.layout-2):not(.layout-3) .tw_product_container:hover .price{
+    opacity: 1;
+}
+
+.tw-product.layout-3 .tw_product_container > a {
+	position:absolute;
+	width:100%;
+	height:100%;
+	display:block;
+	left:0;
+	top:0;
+	z-index:2;
+}
 
 /*----------  Custom css from wp admin  */
 .soc-icon-set {

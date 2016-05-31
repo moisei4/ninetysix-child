@@ -12,6 +12,6 @@ function ninetysix_gentle_styles() {
     wp_enqueue_style( 'ninetysix-child-style', get_stylesheet_directory_uri() . '/gentle.css' );
 }
 
-add_image_size('waves_archive_product', 300, 450, true); 
+add_image_size('waves_archive_product', 770, 1155, true); 
 
 ?>

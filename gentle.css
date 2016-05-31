@@ -245,6 +245,44 @@ body .tw-product:not(.layout-2):not(.layout-3) .tw_product_container:hover .pric
 	z-index:2;
 }
 
+body.single-product .tw-logo {
+	display:none;
+}
+
+
+/*----------  Lightbox  */
+div.pp_overlay {
+	background-color:#FFF;
+}
+
+div.pp_default .pp_details {
+	position:static;
+}
+
+div.pp_default .pp_nav {
+	display:none !important;
+}
+
+div.pp_default .pp_nav .currentTextHolder,
+div.pp_default .pp_nav .pp_play,
+div.pp_default a.pp_arrow_next,
+div.pp_default a.pp_arrow_previous {
+	display:none;
+}
+
+div.pp_default .pp_content_container .pp_details {
+	margin:0;
+	padding:0;
+	height:0;
+}
+
+div.pp_default a.pp_arrow_previous:before {
+	color:#000;
+	content:"\f3d5";
+	font-family:"Ionicons";
+	font-size:18px;
+}
+
 /*----------  Custom css from wp admin  */
 .soc-icon-set {
     text-align: right !important;

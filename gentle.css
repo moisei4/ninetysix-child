@@ -276,12 +276,61 @@ div.pp_default .pp_content_container .pp_details {
 	height:0;
 }
 
-div.pp_default a.pp_arrow_previous:before {
-	color:#000;
-	content:"\f3d5";
-	font-family:"Ionicons";
-	font-size:18px;
+a.pp_previous,
+a.pp_next {
+	text-indent:0;
+	background:none;
+	width:50%;
+	font-size:0;
 }
+
+a.pp_previous:before,
+a.pp_next:before {
+	font-family:"Ionicons";
+	font-size:36px;
+	color:#888;
+	position:absolute;
+	width:30px;
+	height:30px;
+	top:50%;
+	margin-top:-15px;
+	text-align:center;
+}
+
+a.pp_previous:before {
+	content:"\f3d5";
+	left:20px;
+}
+
+a.pp_next:before {
+	content:"\f3d6";
+	right:20px;
+}
+
+div.pp_default .pp_close {
+	background:none;
+	font-size:0;
+	text-indent:0;
+	text-align:center;
+	line-height:30px;
+	right:40px;
+	top:10px;
+	z-index:9999;
+}
+
+div.pp_default .pp_close:before {
+	content:"\f2d7";
+	font-family:"Ionicons";
+	font-size:24px;
+	color:#888;
+}
+
+a.pp_previous:hover:before,
+a.pp_next:hover:before,
+div.pp_default .pp_close:hover:before {
+	color:#000;
+}
+
 
 /*----------  Custom css from wp admin  */
 .soc-icon-set {

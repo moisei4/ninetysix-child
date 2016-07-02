@@ -28,6 +28,7 @@ body.header-left-side {
 
 body.header-left-side .waves-header {
 	width:170px;
+	border-right:0;
 }
 
 body.header-left-side .waves-header-inner>div>.row>div.waves-header-right {
@@ -114,13 +115,41 @@ body.header-left-side .waves-header-inner>div>.row>div.waves-header-right {
 }
 
 body.header-left-side .waves-header-inner>div>.row {
-	justify-content:flex-end;
+	justify-content:space-between;
+}
+
+.admin-bar.header-left-side .waves-header, .admin-bar.header-small:not(.header-left-side) .waves-header-inner {
+	top:0;
+}
+
+body.header-left-side .waves-header-inner>div>.row:before,
+body.header-left-side .waves-header-inner>div>.row:after {
+	content:none;
+}
+
+body.header-left-side .waves-header-inner .waves-header-left {
+	position:relative;
 }
 
 .waves-header-right {
 	padding-bottom:25px;
 }
 
+.gentle_menu_button {
+	visibility:hidden;
+	opacity:0;
+	position:relative;
+	width:30px;
+	height:30px;
+	font-size:32px;
+}
+
+.gentle_menu_button:before {
+	content:"\f20e";
+	font-family:"Ionicons";
+	display:inline-block;
+	color:#444;
+}
 
 /*----------  Languages  */
 #lang_sel_list {
@@ -250,6 +279,33 @@ body.single-product .tw-logo {
 }
 
 
+/*----------  Products  */
+.tw-product.tw-isotope-container > .isotope-container {
+	margin:0 -100px -100px 0;
+}
+
+.tw-product.layout-3 .isotope-container > article {
+	margin:0 100px 100px 0;
+}
+
+.tw-isotope-container.woocommerce.tw-element {
+	margin-top:-70px;
+}
+
+
+/*----------  Single Product  */
+.tw-product-feature {
+	position:relative;
+	left:auto;
+}
+
+.tw-product-feature .tw-product-images {
+	width:auto;
+	float:none;
+	overflow:hidden;
+}
+
+
 /*----------  Lightbox  */
 div.pp_overlay {
 	background-color:#FFF;
@@ -341,7 +397,6 @@ div.pp_default .pp_close:hover:before {
     text-align: center !important;
 }
 
-
 .single-product-navigation {
     display: none !important;
 }
@@ -358,7 +413,49 @@ div.pp_default .pp_close:hover:before {
     display: none !important;
 }
 
-
 .tw-product.layout-3 .tw_product_container, .tw-product.layout-3 .waves-slick-slide, .tw-product.layout-3 .product_thumb {
    background-image: !important;
+}
+
+
+/*----------  Responsive  */
+@media (max-width: 1370px) {
+	.container {
+		width:100% !important;
+	}
+}
+
+@media (max-width: 1199px) {
+	.tw-product-feature .tw-product-images {
+		width:auto;
+	}
+}
+@media (max-width: 1024px) {
+	body.header-left-side .waves-header {
+		/*width:60px;*/
+	}
+	
+	.gentle_menu_button  {
+		visibility:visible;
+		opacity:1;
+	}
+}
+
+@media (max-width: 480px) {
+	body.header-left-side .waves-header {
+		height:auto;
+	}
+	
+	body.header-small.header-left-side .waves-header-inner {
+		width:auto;
+		border:none;
+		position:static;
+		left:auto;
+		top:auto;
+		height:100%;
+	}
+	
+	.admin-bar.header-left-side .waves-header {
+		top:0;
+	}
 }

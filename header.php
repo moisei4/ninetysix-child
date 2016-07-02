@@ -38,7 +38,8 @@
                 <header class="waves-header-inner">
                     <div class="<?php echo esc_attr($waves_options['hf_cont_class']); ?>">
                         <div class="row">
-                            <div class="col-md-2 waves-header-left"><?php
+                            <div class="col-md-2 waves-header-left">
+								<a href="#" class="gentle_menu_button"></a><?php
                                 if($waves_options['header'] == 'header-logo-center'){
                                     echo balanceTags($waves_h_left_buttons);
                                 }else{

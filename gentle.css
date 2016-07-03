@@ -12,10 +12,10 @@
 
 .waves-header-inner .tw-logo {
 	position:fixed;
-	top:11px;
+	top:26px;
 	left:50%;
-	width:200px;
-	margin-left:-15px;
+	width:180px;
+	margin-left:-5px;
 }
 
 .admin-bar .waves-header-inner .tw-logo {
@@ -29,6 +29,7 @@ body.header-left-side {
 body.header-left-side .waves-header {
 	width:170px;
 	border-right:0;
+	border-bottom:0;
 }
 
 body.header-left-side .waves-header-inner>div>.row>div.waves-header-right {
@@ -98,28 +99,12 @@ body.header-left-side .waves-header-inner>div>.row>div.waves-header-right {
 	color:#f00;
 }
 
-/*.sf-mobile-menu.menu_opened .menu-item-has-children.active {
-	opacity:1;
-}
-
-.sf-mobile-menu.menu_opened:hover > li {
-	opacity:1;
-}
-
-.sf-mobile-menu.menu_opened > li {
-	opacity:0;
-}*/
-
 .waves-header-inner>div>.row>div {
 	align-items:flex-start;
 }
 
 body.header-left-side .waves-header-inner>div>.row {
 	justify-content:space-between;
-}
-
-.admin-bar.header-left-side .waves-header, .admin-bar.header-small:not(.header-left-side) .waves-header-inner {
-	top:0;
 }
 
 body.header-left-side .waves-header-inner>div>.row:before,
@@ -138,18 +123,8 @@ body.header-left-side .waves-header-inner .waves-header-left {
 .gentle_menu_button {
 	visibility:hidden;
 	opacity:0;
-	position:relative;
-	width:30px;
-	height:30px;
-	font-size:32px;
 }
 
-.gentle_menu_button:before {
-	content:"\f20e";
-	font-family:"Ionicons";
-	display:inline-block;
-	color:#444;
-}
 
 /*----------  Languages  */
 #lang_sel_list {
@@ -430,20 +405,116 @@ div.pp_default .pp_close:hover:before {
 		width:auto;
 	}
 }
+
 @media (max-width: 1024px) {
 	body.header-left-side .waves-header {
-		/*width:60px;*/
+		position:absolute;
+	}
+	
+	.waves-header-inner > .container {
+		padding-right:40px;
+	}
+	
+	.admin-bar .gentle_menu_button {
+		top:0;
 	}
 	
 	.gentle_menu_button  {
 		visibility:visible;
 		opacity:1;
+		position:absolute;
+		right:-42px;
+		top:-15px;
+		width:30px;
+		height:30px;
+		line-height:30px;
+		text-align:center;
+	}
+	
+	.gentle_menu_button:before {
+		font-family:"Ionicons";
+		display:inline-block;
+		color:#444;
+		line-height:30px;
+		font-size:28px;
+		content:"\f20e";
+	}
+	
+	.small_menu_opened .gentle_menu_button:before {
+		font-size:24px;
+		content:"\f2d7";
+	}
+	
+	body.header-left-side.small_menu_opened {
+		padding-left:170px;
+	}
+	
+	body.header-left-side {
+		padding-left:40px;
+		-webkit-transition: padding 0.3s ease-in-out;
+		-moz-transition: padding 0.3s ease-in-out;
+		-o-transition: padding 0.3s ease-in-out;
+		-ms-transition: padding 0.3s ease-in-out;
+		transition: padding 0.3s ease-in-out;
+	}
+	
+	body.header-left-side .waves-header {
+		left:-130px;
+		-webkit-transition: left 0.3s ease-in-out;
+		-moz-transition: left 0.3s ease-in-out;
+		-o-transition: left 0.3s ease-in-out;
+		-ms-transition: left 0.3s ease-in-out;
+		transition: left 0.3s ease-in-out;
+	}
+	
+	body.header-left-side.small_menu_opened .waves-header {
+		left:0;
+	}
+	
+	.waves-header-inner>div>.row>div,
+	.waves-header-inner>div>.row {
+		display:block;
+	}
+	
+	body.header-left-side .waves-header-inner .waves-header-left {
+		top:auto;
+		margin-top:30px !important;
+	}
+	
+	body.header-left-side .waves-header-inner>div>.row>div.waves-header-right {
+		padding-bottom:20px;
+		padding-top:30px;
+	}
+	
+	.waves-header-inner .tw-logo {
+		margin-left:-60px;
+	}
+	
+	.admin-bar .waves-header-inner .tw-logo {
+		margin-top:0;
+	}
+	
+	.waves-header-inner .tw-logo {
+		position:relative;
+		width:100px;
+		margin-left:0;
+		left:0;
+		top:0;
 	}
 }
 
 @media (max-width: 480px) {
+	body.header-left-side {
+		padding-left:40px !important;
+	}
+	
+	body.header-left-side.small_menu_opened {
+		padding-left:170px !important;
+	}
+	
 	body.header-left-side .waves-header {
-		height:auto;
+		height:0;
+		z-index:99;
 	}
 	
 	body.header-small.header-left-side .waves-header-inner {
@@ -453,9 +524,18 @@ div.pp_default .pp_close:hover:before {
 		left:auto;
 		top:auto;
 		height:100%;
+		margin:0 !important;
 	}
 	
 	.admin-bar.header-left-side .waves-header {
 		top:0;
+	}
+	
+	body.header-left-side .waves-mbtn {
+		margin:0;
+	}
+	
+	.waves-modal-basket.active {
+		z-index:9999;
 	}
 }

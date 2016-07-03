@@ -46,4 +46,40 @@ jQuery(document).ready(function() {
 			return false;
 		} );
 	} )(jQuery);
+	
+	
+	/* Header Small Menu Button Toggle */
+	(function ($) { 
+		$('.gentle_menu_button').on('click', function () { 
+			if ($(window).width() < 1024) {
+				var menuButton = $(this), 
+					bodyClass = $('body');
+				
+				
+				if (bodyClass.hasClass('small_menu_opened')) {
+					bodyClass.removeClass('small_menu_opened');
+				} else {
+					bodyClass.addClass('small_menu_opened');
+				}
+				
+				$(document).click(function(event) {
+					if ($(event.target).closest('.waves-header').length) return;
+					
+					bodyClass.removeClass('small_menu_opened');
+					
+					event.stopPropagation();
+				} );
+				
+				return false;
+			}
+		} );
+		
+		$(window).on('debouncedresize', function () { 
+			if ($(window).width() >= (1024)) {
+				if ($('body').hasClass('small_menu_opened')) {
+					$('body').removeClass('small_menu_opened');
+				}
+			}
+		} );
+	} )(jQuery);
 } );

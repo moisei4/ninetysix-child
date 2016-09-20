@@ -42,8 +42,6 @@ jQuery(document).ready(function() {
 			setTimeout(function () { 
 				$('.single_add_to_cart_button').removeClass('load');
 			}, 2000);
-			
-			return false;
 		} );
 	} )(jQuery);
 	
@@ -51,7 +49,7 @@ jQuery(document).ready(function() {
 	/* Header Small Menu Button Toggle */
 	(function ($) { 
 		$('.gentle_menu_button').on('click', function () { 
-			if ($(window).width() < 1024) {
+			if ($(window).width() < 1025) {
 				var menuButton = $(this), 
 					bodyClass = $('body');
 				
@@ -75,7 +73,7 @@ jQuery(document).ready(function() {
 		} );
 		
 		$(window).on('debouncedresize', function () { 
-			if ($(window).width() >= (1024)) {
+			if ($(window).width() >= (1025)) {
 				if ($('body').hasClass('small_menu_opened')) {
 					$('body').removeClass('small_menu_opened');
 				}

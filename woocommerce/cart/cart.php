@@ -132,6 +132,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<tr>
 			<td colspan="6" class="actions">
 
+				<a class="button wc-backward" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+					<?php _e( 'Return To Shop', 'woocommerce' ) ?>
+				</a>
+				
 				<?php if ( wc_coupons_enabled() ) { ?>
 					<div class="coupon">
 
@@ -142,7 +146,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<?php } ?>
 
 				<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
-
+				
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
 
 				<?php wp_nonce_field( 'woocommerce-cart' ); ?>
@@ -158,13 +162,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 </form>
 
 <div class="cart-collaterals">
-	<?php 
-		do_action( 'woocommerce_cart_collaterals' ); 
-		
-		remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-		
-		add_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display', 20 );
-	?>
+
+	<?php do_action( 'woocommerce_cart_collaterals' ); ?>
+
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>

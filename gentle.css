@@ -215,8 +215,28 @@ body.header-left-side .waves-header-inner .waves-header-left {
 
 
 /*----------  Small fixes  */
+.shop_table  .button.wc-backward {
+	float:left;
+	border: 1px solid #111;
+	background: #111;
+	display: inline-block;
+	padding: 12px 25px;
+	margin-right:25px;
+	color: #fff;
+	line-height: 1;
+	cursor: pointer;
+	width: auto;
+	height:40px;
+	-webkit-transition: border-color 0.3s ease-in-out;
+	-moz-transition: border-color 0.3s ease-in-out;
+	-o-transition: border-color 0.3s ease-in-out;
+	-ms-transition: border-color 0.3s ease-in-out;
+	transition: border-color 0.3s ease-in-out;
+}
+
 .tw-product-feature .single_add_to_cart_button,
 .cart-collaterals  .button,
+.shop_table  .button.wc-backward,
 .shop_table .actions button, 
 .shop_table .actions input[type="submit"] {
 	background-color:#fff;
@@ -225,6 +245,7 @@ body.header-left-side .waves-header-inner .waves-header-left {
 
 .tw-product-feature .single_add_to_cart_button:hover
 .cart-collaterals  .button:hover,
+.shop_table  .button.wc-backward:hover,
 .shop_table .actions button:hover, 
 .shop_table .actions input[type="submit"]:hover {
 	border-color:#ccc;
@@ -262,6 +283,24 @@ body .tw-product:not(.layout-2):not(.layout-3) .tw_product_container:hover .pric
 
 body.single-product .tw-logo {
 	display:none;
+}
+
+.waves-mbtn .ion-bag {
+	display:inline-block;
+	width:14px;
+	text-align:center;
+}
+
+.gentle_cart_count {
+	margin-left:5px;
+}
+
+.waves-modal-basket .woocommerce-message a{
+	color:#fff;
+}
+
+.waves-modal-basket .woocommerce-message a:hover{
+	color:#888888;
 }
 
 
